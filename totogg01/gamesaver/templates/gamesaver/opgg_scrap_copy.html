@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    img{
+      width: 45px;
+    }
+    th{
+      text-align:center;
+      white-space: nowrap;
+    } 
+    td.center{
+      text-align: center;
+    }
+  </style>
+</head>
+<!--스크랩 페이지 수정!-->
+<body>
+  <div class="container mt-5">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">이미지</th>
+        <th scope="col">선수</th>
+        <th scope="col">팀명</th>
+        <th scope="col">챔피언</th>
+        <th scope="col">결과</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in datas %}
+      {% if data.playerName == '0NER0' %}
+        <tr>
+
+          <td class="center"><img src="{{ data.champ_img }}"></td>
+          <td>{{ data.playerName }}</td>
+          <td>{{ data.teamName }}</td>
+          <td>{{ data.champ }}</td>
+          <td>{{ data.rst }}</td>
+        </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
