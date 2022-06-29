@@ -156,7 +156,7 @@ def slack_bot(message):
         )
 
 # 디스코드
-DISCORD_TOKEN = 'OTkxMjY2MzQ2NTUxNzUwNzE2.Gtv4W9.cDrChBqukjuAEh149awqoayhunKNIcKn5RJkTs'
+DISCORD_TOKEN = '####'
 
 def run():
  
